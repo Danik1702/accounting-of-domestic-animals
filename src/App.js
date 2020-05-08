@@ -19,17 +19,17 @@ const App = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route to={ROUTES.landing} exact component={Landing} />
-        <Route to={ROUTES.careCheck} exact component={CareCheck} />
-        <Route to={ROUTES.losePet} exact component={LosePet} />
-        <Route to={ROUTES.petFinder} exact component={PetFinder} />
-        <Route to={ROUTES.petProfile} exact component={PetProfile} />
-        <Route to={ROUTES.petRegistration} exact component={PetRegistration} />
-        <Route to={ROUTES.shelter} exact component={Shelter} />
-        <Route to={ROUTES.userProfile} exact component={UserProfile} />
-        <Route to={ROUTES.userRegistration} exact component={UserRegistration} />
-        <Route to={ROUTES.vanishedPetProfile} exact component={VanishedPetProfile} />
-        <Route to={ROUTES.vanishedPets} exact component={VanishedPets} />
+        <Route path={ROUTES.landing} exact component={Landing} />
+        <Route path={ROUTES.careCheck} exact component={CareCheck} />
+        <Route path={ROUTES.losePet} exact component={LosePet} />
+        <Route path={ROUTES.petFinder} exact component={PetFinder} />
+        <Route path={ROUTES.petProfile} exact component={PetProfile} />
+        <Route path={ROUTES.petRegistration} exact component={PetRegistration} />
+        <Route path={ROUTES.shelter} exact component={Shelter} />
+        <Route path={ROUTES.userProfile} exact component={UserProfile} />
+        <Route path={ROUTES.userRegistration} exact component={UserRegistration} />
+        <Route path={ROUTES.vanishedPetProfile} exact component={VanishedPetProfile} />
+        <Route path={ROUTES.vanishedPets} exact component={VanishedPets} />
       </Switch>
     </BrowserRouter>
   );
