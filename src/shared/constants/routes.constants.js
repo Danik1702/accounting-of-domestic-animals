@@ -1,4 +1,4 @@
-export const router = {
+export const ROUTES = {
     landing: '/',
     careCheck: '/care-check',
     losePet: '/lose-pet',
