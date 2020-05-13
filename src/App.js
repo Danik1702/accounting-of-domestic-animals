@@ -15,6 +15,8 @@ import { VanishedPets } from './pages/vanished-pets/vanished-pets.component';
 
 import { ROUTES } from './shared/constants/routes.constants';
 
+import './App.css';
+
 const App = () => {
   return (
     <BrowserRouter>
