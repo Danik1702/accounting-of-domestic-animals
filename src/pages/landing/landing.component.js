@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { Header } from "../../shared/components/header/header.component";
-
+import { Footer } from '../../shared/components/footer/footer.component';
 import { LandingMenu } from './components/landing-menu/landing-menu.component';
 import { AboutUs } from './components/about-us/about-us.component';
 
@@ -44,6 +44,7 @@ export const Landing = () => {
       </div>
       <LandingMenu onLandingMenuClick={onLandingMenuClick} />
       {renderHelper()}
+      <Footer />
     </div>
   );
 };
