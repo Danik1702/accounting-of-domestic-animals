@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 
 import { Header } from "../../shared/components/header/header.component";
-import { Footer } from '../../shared/components/footer/footer.component';
-import { LandingMenu } from './components/landing-menu/landing-menu.component';
-import { AboutUs } from './components/about-us/about-us.component';
+import { Footer } from "../../shared/components/footer/footer.component";
+import { LandingMenu } from "./components/landing-menu/landing-menu.component";
+import { AboutUs } from "./components/about-us/about-us.component";
+import { Goal } from "./components/goal/goal.component";
 
 import "./landing.styles.css";
 
@@ -11,9 +12,11 @@ export const Landing = () => {
   const [landingNumber, setLandingNumber] = useState(0);
 
   const onLandingMenuClick = (event) => {
-    if (event.target.tagName === 'LI') {
-      const menuLinksArray = document.querySelectorAll('.landing-menu__list__item');
-      
+    if (event.target.tagName === "LI") {
+      const menuLinksArray = document.querySelectorAll(
+        ".landing-menu__list__item"
+      );
+
       for (let i = 0; i < menuLinksArray.length; i++) {
         if (event.target === menuLinksArray[i]) {
           setLandingNumber(i);
@@ -24,12 +27,14 @@ export const Landing = () => {
 
   const renderHelper = () => {
     switch (landingNumber) {
-      case 0: 
+      case 0:
         return <AboutUs />;
-      default: 
-        return 'something went wrong..'
+      case 1:
+        return <Goal />;
+      default:
+        return "something went wrong..";
     }
-  }
+  };
 
   return (
     <div className="landing">
@@ -37,7 +42,7 @@ export const Landing = () => {
       <div className="banner-container">
         <div className="banner-text-container">
           <h1 className="banner-text">
-            Комфортніше життя вашого улюбленця разом з 
+            Комфортніше життя вашого улюбленця разом з
             <span className="banner-company-name"> Petsy</span>
           </h1>
         </div>
