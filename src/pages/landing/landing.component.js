@@ -6,6 +6,7 @@ import { LandingMenu } from "./components/landing-menu/landing-menu.component";
 import { AboutUs } from "./components/about-us/about-us.component";
 import { Goal } from "./components/goal/goal.component";
 import { ServiceRating } from "./components/service-rating/service-rating.component";
+import { QA } from "./components/qa/qa.component";
 
 import "./landing.styles.css";
 
@@ -34,6 +35,8 @@ export const Landing = () => {
         return <Goal />;
       case 2:
         return <ServiceRating />;
+      case 3:
+        return <QA />;
       default:
         return "Something went wrong..";
     }
