@@ -1,0 +1,104 @@
+.container {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating-container {
+  width: 30%;
+  text-align: center;
+}
+
+.rating__title {
+  color: #ffffff;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.rating__icon {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.reviews-container {
+  width: 45%;
+}
+
+.reviews-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.review__title {
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.add-review-button {
+  padding: 3px 20px;
+  background: #1c1a1a;
+  border: 2px solid #9830bd;
+  box-sizing: border-box;
+  border-radius: 22px;
+  font-size: 16px;
+  line-height: 18px;
+  color: #9830bd;
+  cursor: pointer;
+}
+
+.review {
+  background-color: #eee3e3;
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 10px 20px;
+}
+
+.review-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #000000;
+}
+
+.user-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.user-name {
+  width: 70%;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.review-time {
+  font-size: 16px;
+  line-height: 19px;
+  color: #2d2d2d;
+}
+
+.review-text-container {
+  margin: 10px 0;
+}
+
+.more-container {
+  display: flex;
+  justify-content: center;
+}
+
+.more-button {
+  background: #1c1a1a;
+  border: 2px solid #e54e4e;
+  box-sizing: border-box;
+  border-radius: 22px;
+  padding: 12px 25px;
+  color: #e54e4e;
+  font-size: 14px;
+  line-height: 16px;
+  cursor: pointer;
+}
