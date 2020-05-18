@@ -13,7 +13,7 @@ export const UserRegistration = () => {
   const renderLeftSide = () => {
     return (
       <>
-        <img src={logo} className="logo" alt="logo" />
+        <img src={logo} className="reg-logo" alt="logo" />
         <img src={image} className="reg-page-image" alt="dog-with-peoples" />
       </>
     );
