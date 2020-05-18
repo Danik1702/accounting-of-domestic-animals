@@ -1,0 +1,57 @@
+.footer-container {
+  margin-top: 100px;
+  height: 125px;
+  background-color: #c0bfbf;
+}
+
+.footer-wrapper {
+  height: 125px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-header {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.contacts-title {
+  font-size: 18px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.contacts-text {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.instagram-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.facebook-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.logo-icon {
+  height: 125px;
+  width: 125px;
+}
+
+.icon {
+  cursor: pointer;
+}
