@@ -28,13 +28,12 @@ export const ReportMissingForm = (props) => {
     <div className="rm-form">
       <form onSubmit={handleSubmit(onFormSubmit)}>
         <label className="rm-form-label">Виберіть тваринку яка пропала</label>
-        <select className="rm-form-field" name="pet" ref={register({ required: true })}>
+        <select className="rm-form-field" name="pet" ref={register}>
           <option disabled value="Виберіть тваринку">
             Виберіть тваринку
           </option>
           {renderSelect()}
         </select>
-        {errors.pet && <p className="rm-form-validation">Виберіть тваринку</p>}
 
         <label className="rm-form-label">Вкажіть дату втрати</label>
         <input
@@ -43,7 +42,9 @@ export const ReportMissingForm = (props) => {
           name="date"
           ref={register({ required: true })}
         />
-        {errors.date && <p className="rm-form-validation">Вкажіть день пропажі</p>}
+        {errors.date && (
+          <p className="rm-form-validation">Вкажіть день пропажі</p>
+        )}
 
         <label className="rm-form-label">
           Вкажіть місце де трапилася дана пригода
@@ -54,7 +55,11 @@ export const ReportMissingForm = (props) => {
           name="place"
           ref={register({ required: true })}
         />
-        {errors.place && <p className="rm-form-validation">Напишіть місце пропажі(приблизне місце)</p>}
+        {errors.place && (
+          <p className="rm-form-validation">
+            Напишіть місце пропажі(приблизне місце)
+          </p>
+        )}
 
         <label className="rm-form-label">
           Детальна інформація про те як сталася пропажа(при яких умовах, куда
