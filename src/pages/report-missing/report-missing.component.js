@@ -4,6 +4,7 @@ import API from "../../shared/apis/server-api";
 import { Header } from "../../shared/components/header/header.component";
 import { Footer } from "../../shared/components/footer/footer.component";
 import { PageHeader } from "./components/page-header/page-header.component";
+import { ReportMissingForm } from "./components/report-missing-form/report-missing-form.component";
 
 import "./report-missing.styles.css";
 
@@ -25,6 +26,7 @@ export const ReportMissing = () => {
       <Header />
       <div className="report-missing-wrapper">
         <PageHeader />
+        <ReportMissingForm breeds={breeds} />
       </div>
       <Footer />
     </div>
