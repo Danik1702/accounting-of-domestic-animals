@@ -20,7 +20,7 @@
   background-color: #1f212b;
 }
 
-.logo {
+.reg-logo {
   width: 150px;
   height: 150px;
 }
@@ -56,18 +56,18 @@
 .google-container {
   height: 80px;
   border-bottom: 2px solid #c0bcbc;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .input-field {
-  width: 100%;
+  width: 96%;
   background: #dbdbdb;
   border-radius: 10px;
   height: 30px;
   border: none;
-  margin: 9px 0 20px;
+  margin-top: 9px;
   outline: none;
-  padding: 0 15px;
+  padding-left: 4%;
   font-size: 16px;
   border: 1px solid #dbdbdb;
 }
@@ -83,6 +83,7 @@
   font-size: 20px;
   line-height: 23px;
   color: #ffffff;
+  margin-top: 20px;
 }
 
 .name-container {
@@ -91,7 +92,7 @@
 }
 
 .name-container-field {
-  width: 45%;
+  width: 43%;
 }
 
 .submit-container {
@@ -105,4 +106,9 @@
   padding: 10px 20px;
   border: none;
   outline: none;
+}
+
+.reg-error {
+  color: #a32121;
+  margin-top: 3px;
 }
