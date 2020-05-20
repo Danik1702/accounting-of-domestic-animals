@@ -12,6 +12,7 @@ import { UserProfile } from './pages/user-profile/user-profile.component';
 import { UserRegistration } from './pages/user-registration/user-registration.component';
 import { VanishedPetProfile } from './pages/vanished-pet-profile/vanished-pet-profile.component';
 import { VanishedPets } from './pages/vanished-pets/vanished-pets.component';
+import { ReportMissing } from './pages/report-missing/report-missing.component';
 
 import { ROUTES } from './shared/constants/routes.constants';
 
@@ -32,6 +33,7 @@ const App = () => {
         <Route path={ROUTES.userRegistration} exact component={UserRegistration} />
         <Route path={ROUTES.vanishedPetProfile} exact component={VanishedPetProfile} />
         <Route path={ROUTES.vanishedPets} exact component={VanishedPets} />
+        <Route path={ROUTES.reportMissing} exact component={ReportMissing} />
       </Switch>
     </BrowserRouter>
   );

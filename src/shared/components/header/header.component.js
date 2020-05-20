@@ -9,7 +9,7 @@ export const Header = () => {
     <div className="header-container">
       <div className="wrapper">
         <div className="logo-container">
-          <img src={logo} className="logo" alt="logo" />
+          <img src={logo} className="header-logo" alt="logo" />
         </div>
         <ul className="list-container">
           <li className="list-container__link">Головна</li>
