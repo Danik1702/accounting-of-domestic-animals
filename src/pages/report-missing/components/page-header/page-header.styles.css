@@ -1,0 +1,16 @@
+.page-header-container {
+  padding: 40px 0;
+  color: #ffffff;
+  border-bottom: 2px solid #DF7575;
+}
+
+.page-header {
+  font-size: 30px;
+  line-height: 35px;
+  margin-bottom: 15px;
+}
+
+.page-header-text {
+  font-size: 24px;
+  line-height: 28px;
+}
