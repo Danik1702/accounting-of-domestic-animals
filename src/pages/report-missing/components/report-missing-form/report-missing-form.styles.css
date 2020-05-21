@@ -88,3 +88,9 @@
 .rm-form-submit:hover {
     background-color: #a72b2b;
 }
+
+.rm-form-validation {
+  margin-top: 5px;
+  color: #971010;
+  font-size: 16px;
+}
