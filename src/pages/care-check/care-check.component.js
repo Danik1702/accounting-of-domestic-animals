@@ -1,16 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
+import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 import { Header } from "../../shared/components/header/header.component";
 import { Footer } from "../../shared/components/footer/footer.component";
 import API from "../../shared/apis/server-api";
 import dogPhoto from "../../images/care-page-dog.svg";
+import { careCheckValues } from '../../store/care-check/actions/care-check.actions';
 
 import "./care-check.styles.css";
 
 export const CareCheck = () => {
   const [breeds, setBreeds] = useState([]);
   const { register, handleSubmit, errors } = useForm();
+  const dispatch = useDispatch();
+  const history = useHistory();
 
   useEffect(() => {
     const getBreeds = async () => {
@@ -23,7 +28,9 @@ export const CareCheck = () => {
   }, []);
 
   const onFormSubmit = (data) => {
-    console.log(data);
+    dispatch(careCheckValues(data));
+
+    history.push('/care-check-result');
   };
 
   const renderSelect = () => {
