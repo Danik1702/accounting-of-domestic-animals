@@ -1,16 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
+import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 import { Header } from "../../shared/components/header/header.component";
 import { Footer } from "../../shared/components/footer/footer.component";
 import API from "../../shared/apis/server-api";
 import dogPhoto from "../../images/care-page-dog.svg";
+import { careCheckValues } from '../../store/care-check/actions/care-check.actions';
 
 import "./care-check.styles.css";
 
 export const CareCheck = () => {
   const [breeds, setBreeds] = useState([]);
   const { register, handleSubmit, errors } = useForm();
+  const dispatch = useDispatch();
+  const history = useHistory();
 
   useEffect(() => {
     const getBreeds = async () => {
@@ -23,7 +28,15 @@ export const CareCheck = () => {
   }, []);
 
   const onFormSubmit = (data) => {
-    console.log(data);
+    dispatch(careCheckValues(data));
+
+    const location = {
+      pathname: '/care-check-result',
+      search: `?care-check-values:b=${data.breed}&mK=${data.mealCount}&mW=${data.mealWeight}&mC=${data.medChecks}&wK=${data.walkingCount}&wT=${data.walkingTime}&w=${data.weight}`,
+      state: { careCheckValues: data }
+    };
+
+    history.push(location);
   };
 
   const renderSelect = () => {
@@ -117,11 +130,11 @@ export const CareCheck = () => {
               <input
                 type="radio"
                 name="walkingCount"
-                value="більше 3-ох разів"
+                value="4-6 разів"
                 className="cc-form-radio"
                 ref={register({ required: true })}
               />
-              <label className="cc-radio-label">Більше 3-ох разів</label>
+              <label className="cc-radio-label">4-6 разів</label>
             </div>
             {errors.walkingCount && (
               <p className="cc-form-error">
@@ -129,14 +142,14 @@ export const CareCheck = () => {
               </p>
             )}
 
-            <label className="cc-form-label">Час окремого вигулювання</label>
+            <label className="cc-form-label">Час окремого вигулювання в хвилинах</label>
             <input
               className="cc-form-field cc-input-field"
               name="walkingTime"
               ref={register({ required: true })}
             />
             {errors.walkingTime && (
-              <p className="cc-form-error">Будь-ласка час окремого вигулу</p>
+              <p className="cc-form-error">Будь-ласка вкажіть час окремого вигулу</p>
             )}
 
             <label className="cc-form-label">
@@ -179,11 +192,11 @@ export const CareCheck = () => {
               <input
                 type="radio"
                 name="mealCount"
-                value="більше 3-ох прийомів"
+                value="4-6 прийомів"
                 className="cc-form-radio"
                 ref={register({ required: true })}
               />
-              <label className="cc-radio-label">Більше 3-ох прийомів</label>
+              <label className="cc-radio-label">4-6 прийомів</label>
             </div>
             {errors.mealCount && (
               <p className="cc-form-error">
@@ -234,11 +247,11 @@ export const CareCheck = () => {
               <input
                 type="radio"
                 name="medChecks"
-                value="більше 2-ох разів"
+                value="3-5 разів"
                 className="cc-form-radio"
                 ref={register({ required: true })}
               />
-              <label className="cc-radio-label">Більше 2-ох разів</label>
+              <label className="cc-radio-label">3-5 разів</label>
             </div>
             {errors.medChecks && (
               <p className="cc-form-error">

@@ -13,6 +13,7 @@ import { UserRegistration } from './pages/user-registration/user-registration.co
 import { VanishedPetProfile } from './pages/vanished-pet-profile/vanished-pet-profile.component';
 import { VanishedPets } from './pages/vanished-pets/vanished-pets.component';
 import { ReportMissing } from './pages/report-missing/report-missing.component';
+import { CareCheckResult } from './pages/care-check-result/care-check-result.component';
 
 import { ROUTES } from './shared/constants/routes.constants';
 
@@ -24,6 +25,7 @@ const App = () => {
       <Switch>
         <Route path={ROUTES.landing} exact component={Landing} />
         <Route path={ROUTES.careCheck} exact component={CareCheck} />
+        <Route path={ROUTES.careCheckResult} exact component={CareCheckResult} />
         <Route path={ROUTES.losePet} exact component={LosePet} />
         <Route path={ROUTES.petFinder} exact component={PetFinder} />
         <Route path={ROUTES.petProfile} exact component={PetProfile} />

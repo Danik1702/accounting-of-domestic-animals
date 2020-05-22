@@ -1,0 +1,59 @@
+.criterion-container {
+  margin-top: 20px;
+}
+
+.criterion-title {
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.criterion-body {
+  border-radius: 10px;
+  padding-left: 10px;
+  padding: 5px 0 10px 10px;
+}
+
+.criterion-good {
+  background: linear-gradient(270deg, #5bdc47 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.criterion-bad {
+  background: linear-gradient(270deg, #f73b3b 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.criterion-user-value {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.criterion-text-good {
+  color: #5bdc47;
+}
+
+.criterion-text-bad {
+  color: #f63b3b;
+}
+
+.criterion-default-value {
+  font-size: 14px;
+  line-height: 16px;
+  color: #c4c4c4;
+}
+
+.criterion-advice-title {
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.criterion-advice-text {
+  font-size: 14px;
+  line-height: 16px;
+  color: #c4c4c4;
+}

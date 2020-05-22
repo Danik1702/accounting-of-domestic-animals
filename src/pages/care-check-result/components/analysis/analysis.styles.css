@@ -1,0 +1,14 @@
+.analysis-container {
+  width: 45%;
+}
+
+.analysis-title-container {
+  text-align: center;
+  margin: 40px 0 15px;
+}
+
+.analysis-title {
+  color: #ffffff;
+  font-size: 30px;
+  line-height: 35px;
+}
