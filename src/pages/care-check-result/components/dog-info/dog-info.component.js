@@ -14,11 +14,11 @@ export const DogInfo = (props) => {
         <img src={dog} alt="dog" className="ccr-image" />
       </div>
       <h2 className="ccr-header">Додаткова інформація</h2>
-      <div className="ccr-info-container">
+      <div className="ccr-information">
         <h3 className="ccr-info-header">Догляд за породою</h3>
         <p className="ccr-info-text">{props.about.aboutBreed}</p>
       </div>
-      <div className="ccr-info-container">
+      <div className="ccr-information">
         <h3 className="ccr-info-header">Можливі проблеми</h3>
         <p className="ccr-info-text">{props.about.possibleProblems}</p>
       </div>
