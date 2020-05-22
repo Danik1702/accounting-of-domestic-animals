@@ -30,7 +30,13 @@ export const CareCheck = () => {
   const onFormSubmit = (data) => {
     dispatch(careCheckValues(data));
 
-    history.push('/care-check-result');
+    const location = {
+      pathname: '/care-check-result',
+      search: `?care-check-values:b=${data.breed}&mK=${data.mealCount}&mW=${data.mealWeight}&mC=${data.medChecks}&wK=${data.walkingCount}&wT=${data.walkingTime}&w=${data.weight}`,
+      state: { careCheckValues: data }
+    };
+
+    history.push(location);
   };
 
   const renderSelect = () => {
