@@ -30,14 +30,7 @@ export const CareCheckResult = (props) => {
 
     getBreed();
   }, []);
-
-  // const cLog = () => {
-  //   const loc = props.location.state.careCheckValues;
-  //   console.log(loc);
-
-  //   console.log(breed);
-  // };
-
+  
   const renderContent = () => {
     if (!breed || !Object.values(breed).length) {
       return <h2 className="ccr-loading">Дані загружаються</h2>;

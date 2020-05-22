@@ -8,7 +8,7 @@ export const Criterion = (props) => {
 
   const getComparisonResult = () => {
     if (defaultValue.length === 1 && userValue.length === 1) {
-      return userValue === defaultValue[0];
+      return userValue[0] === defaultValue[0];
     }
 
     if (userValue.length !== 1) {
@@ -30,6 +30,60 @@ export const Criterion = (props) => {
     const renderAdvice = () => {
       if (color === "good") {
         return "";
+      }
+
+      if (userValue.length === 1 && defaultValue.length === 1) {
+        if (+userValue[0] > +defaultValue[0]) {
+          return (
+            <>
+              <p className="criterion-advice-title">Порада</p>
+              <p className="criterion-advice-text">{props.lowAdvice}</p>
+            </>
+          );
+        }
+
+        return (
+          <>
+            <p className="criterion-advice-title">Порада</p>
+            <p className="criterion-advice-text">{props.advice}</p>
+          </>
+        );
+      }
+
+      if (userValue.length !== 1 && defaultValue.length === 1) {
+        if (+defaultValue[0] < +userValue[0]) {
+          return (
+            <>
+              <p className="criterion-advice-title">Порада</p>
+              <p className="criterion-advice-text">{props.lowAdvice}</p>
+            </>
+          );
+        }
+
+        return (
+          <>
+            <p className="criterion-advice-title">Порада</p>
+            <p className="criterion-advice-text">{props.advice}</p>
+          </>
+        );
+      }
+
+      if (userValue.length === 1 && defaultValue.length !== 1) {
+        if (+userValue[0] < +defaultValue[0]) {
+          return (
+            <>
+              <p className="criterion-advice-title">Порада</p>
+              <p className="criterion-advice-text">{props.advice}</p>
+            </>
+          );
+        }
+
+        return (
+          <>
+            <p className="criterion-advice-title">Порада</p>
+            <p className="criterion-advice-text">{props.lowAdvice}</p>
+          </>
+        );
       }
 
       return (

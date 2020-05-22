@@ -5,11 +5,6 @@ import { Criterion } from "../criterion/criterion.component";
 import "./analysis.styles.css";
 
 export const Analysis = (props) => {
-  //   const cLog = () => {
-  //     console.log(props.defaultPetValues);
-  //     console.log(props.userPetValues);
-  //   };
-
   return (
     <div className="analysis-container">
       <div className="analysis-title-container">
@@ -19,6 +14,7 @@ export const Analysis = (props) => {
         title="Вага"
         measure="кг"
         advice="Збільшити кількість їжі, яку собака споживає протягом дня"
+        lowAdvice="Зменшити кількість їжі, яку собака споживає протягом дня"
         userPetValue={props.userPetValues.weight}
         defaultPetValue={props.defaultPetValues.weight}
       />
@@ -26,6 +22,7 @@ export const Analysis = (props) => {
         title="Кількість вигулювань за день"
         measure=""
         advice="Збільшити кількість вигулювань протягом дня"
+        lowAdvice="Зменшити кількість вигулювань протягом дня"
         userPetValue={props.userPetValues.walkingCount}
         defaultPetValue={props.defaultPetValues.walkingCount}
       />
@@ -33,6 +30,7 @@ export const Analysis = (props) => {
         title="Тривалість окремого вигулювання"
         measure="хв"
         advice="Збільшити час кожного вигулу"
+        lowAdvice="Зменшити час кожного вигулу"
         userPetValue={props.userPetValues.walkingTime}
         defaultPetValue={props.defaultPetValues.walkingTime}
       />
@@ -40,6 +38,7 @@ export const Analysis = (props) => {
         title="Кількість прийомів їжі на день"
         measure=""
         advice="Збільшити кількість прийомів їжі собачки"
+        lowAdvice="Зменшити кількість прийомів їжі собачки"
         userPetValue={props.userPetValues.mealCount}
         defaultPetValue={props.defaultPetValues.mealCount}
       />
@@ -47,6 +46,7 @@ export const Analysis = (props) => {
         title="Вага однієї порції їжі в грамах"
         measure="грамм"
         advice="Збільшити кількість їжі в одному прийомі"
+        lowAdvice="Зменшити кількість їжі в одному прийомі"
         userPetValue={props.userPetValues.mealWeight}
         defaultPetValue={props.defaultPetValues.mealWeight}
       />
@@ -54,6 +54,7 @@ export const Analysis = (props) => {
         title="Кількість медичних чекапів на рік"
         measure=""
         advice="Збільшити кількість відвідувань ветеринара"
+        lowAdvice="Зменшити кількість відвідувань ветеринара"
         userPetValue={props.userPetValues.medChecks}
         defaultPetValue={props.defaultPetValues.medChecks}
       />
