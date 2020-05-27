@@ -1,4 +1,10 @@
-.user-profile-wrapper {
+.up-wrapper {
   width: 90%;
   margin: 0 auto;
+}
+
+.up-content {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
 }

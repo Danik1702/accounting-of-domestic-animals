@@ -1,0 +1,24 @@
+.up-additional-info {
+  width: 36%;
+  padding: 10px 2% 20px;
+  border-radius: 20px;
+  background: linear-gradient(270deg, #1c1a1a 0%, #ffffff 100%);
+}
+
+.up-additional-info-header {
+  font-size: 24px;
+  line-height: 28px;
+  padding-left: 20px;
+  margin-bottom: 7px;
+}
+
+.up-additional-info-criterion {
+  margin: 5px 0;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.up-additional-info-criterion-title {
+  font-style: italic;
+  font-size: 18px;
+}
