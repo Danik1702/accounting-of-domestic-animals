@@ -29,10 +29,6 @@ export const UserProfile = () => {
     getUserData();
   }, []);
 
-  // const logData = () => {
-  //   console.log(userPets);
-  // };
-
   const renderHelper = () => {
     if (!Object.keys(userData).length) {
       return <div>Дані загружаютсья</div>;
@@ -42,10 +38,7 @@ export const UserProfile = () => {
       <>
         <Header />
         <div className="up-wrapper">
-          <UserProfileHeader
-            firstName={userData.additionalInfo.firstName}
-            lastName={userData.additionalInfo.lastName}
-          />
+          <UserProfileHeader userInfo={userData.additionalInfo || ""} />
           <div className="up-content">
             <UserPets pets={userPets} />
             <UserAdditionalInfo userInfo={userData.additionalInfo} />
