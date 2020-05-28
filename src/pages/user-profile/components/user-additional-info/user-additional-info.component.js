@@ -5,7 +5,7 @@ import "./user-additional-info.styles.css";
 export const UserAdditionalInfo = (props) => {
   return (
     <div className="up-additional-info">
-      <div clasName="up-additional-info-header-container">
+      <div className="up-additional-info-header-container">
         <h3 className="up-additional-info-header">Інформація</h3>
       </div>
       <div className="up-additional-info-body">

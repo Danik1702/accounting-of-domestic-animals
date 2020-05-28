@@ -11,16 +11,27 @@ import "./user-profile.styles.css";
 
 export const UserProfile = () => {
   const [userData, setUserData] = useState({});
+  const [userPets, setUserPets] = useState([]);
 
   useEffect(() => {
     const getUserData = async () => {
       const info = await API.get("/users/1");
+
+      info.data.pets.forEach(async (petId) => {
+        const pet = await API.get(`/pets/${petId}`);
+
+        setUserPets([...userPets, pet.data]);
+      });
 
       setUserData(info.data);
     };
 
     getUserData();
   }, []);
+
+  // const logData = () => {
+  //   console.log(userPets);
+  // };
 
   const renderHelper = () => {
     if (!Object.keys(userData).length) {
@@ -36,7 +47,7 @@ export const UserProfile = () => {
             lastName={userData.additionalInfo.lastName}
           />
           <div className="up-content">
-            <UserPets />
+            <UserPets pets={userPets} />
             <UserAdditionalInfo userInfo={userData.additionalInfo} />
           </div>
         </div>
