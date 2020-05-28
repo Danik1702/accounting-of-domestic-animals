@@ -30,4 +30,10 @@
   cursor: pointer;
   font-weight: bold;
   text-transform: uppercase;
+  transition-duration: 1s;
+}
+
+.up-header-edit:hover {
+  background: #ffffff;
+  box-shadow: 0 0 5px #9830BD;
 }
