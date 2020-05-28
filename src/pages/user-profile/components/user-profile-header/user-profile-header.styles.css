@@ -37,3 +37,86 @@
   background: #ffffff;
   box-shadow: 0 0 5px #9830BD;
 }
+
+
+.up-modal {
+  width: 500px;
+  height: 500px;
+  margin: 50px auto;
+  padding: 15px 20px;
+  background-color: #747474;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #9830BD;
+  outline: none;
+}
+
+.up-edit-label {
+  display: block;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+  margin: 10px 0 3px 20px;
+}
+
+.up-edit-field {
+  background-color: #cccccc;
+  width: 96%;
+  padding: 5px 2%;
+  border-radius: 10px;
+  border: 1px solid #cccccc;
+  font-size: 16px;
+  outline: none;
+}
+
+.up-edit-field:focus {
+  background-color: #ffffff;
+  border: 1px solid #9830BD;
+  box-shadow: 0 0 5px #9830BD;
+}
+
+.up-edit-submit {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.uo-edit-submit-button {
+  border: none;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 5px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #9830BD;
+  outline: none;
+  transition-duration: 1s;
+}
+
+.uo-edit-submit-button:hover {
+  color: #9830BD;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px #9830BD;
+
+}
+
+.up-edit-undo {
+  font-size: 18px;
+  text-transform: uppercase;
+  border-radius: 20px;
+  padding: 5px 20px;
+  background-color: #2a2a2a;
+  color: #ffffff;
+  cursor: pointer;
+  transition-duration: 1s;
+}
+
+.up-edit-undo:hover {
+  color: #2a2a2a;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px #2a2a2a;
+}
+
+.up-edit-error {
+  color: rgb(165, 23, 23);
+}
