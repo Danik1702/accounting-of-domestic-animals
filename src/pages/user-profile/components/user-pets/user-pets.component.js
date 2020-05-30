@@ -1,10 +1,14 @@
 import React from "react";
+import { useHistory } from 'react-router-dom';
 
+import { ROUTES } from '../../../../shared/constants/routes.constants';
 import petPhoto from "../../../../images/dog-profile.png";
 
 import "./user-pets.styles.css";
 
 export const UserPets = (props) => {
+  const history = useHistory();
+
   const renderPets = () => {
     if (!props.pets.length) {
       return (
@@ -27,6 +31,10 @@ export const UserPets = (props) => {
     });
   };
 
+  const onNewPetClick = () => {
+    history.push(ROUTES.petRegistration);
+  };
+
   return (
     <div className="up-pets-container">
       <div className="up-pets-header">
@@ -34,7 +42,7 @@ export const UserPets = (props) => {
       </div>
       <div className="up-pets-body">{renderPets()}</div>
       <div className="up-pets-add-pet">
-        <div className="up-pets-add-pet-button">
+        <div className="up-pets-add-pet-button" onClick={onNewPetClick}>
           Зареєструвати нову тваринку
         </div>
       </div>
