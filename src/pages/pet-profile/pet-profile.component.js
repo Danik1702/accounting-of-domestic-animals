@@ -1,5 +1,16 @@
 import React from "react";
 
+import { Header } from "../../shared/components/header/header.component";
+import { Footer } from "../../shared/components/footer/footer.component";
+
+import "./pet-profile.styles.css";
+
 export const PetProfile = () => {
-  return <div>PetProfile component</div>;
+  return (
+    <>
+      <Header />
+      <div className="pp-wrapper"></div>
+      <Footer />
+    </>
+  );
 };
