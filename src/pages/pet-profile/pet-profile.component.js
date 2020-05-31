@@ -30,7 +30,7 @@ export const PetProfile = () => {
     if (!Object.keys(pet).length || !Object.keys(userInfo).length) {
       return <div>Зачекайте, дані грузяться</div>;
     }
-    
+
     return (
       <>
         <Header />
@@ -39,13 +39,14 @@ export const PetProfile = () => {
             petPhoto={pet.imageUrl}
             name={`${userInfo.additionalInfo.firstName} ${userInfo.additionalInfo.lastName}`}
           />
-          <MainInfo 
+          <MainInfo
             name={pet.name}
             breed={pet.breed}
             age={pet.age}
             gender={pet.gender}
             id={pet.id}
           />
+          <AdditionalInfo info={pet.additionalInfo} />
         </div>
         <Footer />
       </>
