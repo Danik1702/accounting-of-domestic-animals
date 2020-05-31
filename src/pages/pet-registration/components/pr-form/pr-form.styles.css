@@ -1,0 +1,10 @@
+.pr-form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pr-form {
+  width: 70%;
+  margin: 0 auto;
+}
