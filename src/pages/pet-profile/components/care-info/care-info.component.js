@@ -1,12 +1,12 @@
 import React from "react";
 
-import { Characteristic } from "./main-info.characteristic";
+import { Characteristic } from "./characteristic/characteristic.component";
 
-import "./main-info.styles.css";
+import "./care-info.styles.css";
 
-export const MainInfo = (props) => {
+export const CareInfo = (props) => {
   return (
-    <div className="pp-main-info">
+    <div clasName="pp-care-info">
       <Characteristic />
       <Characteristic />
       <Characteristic />
