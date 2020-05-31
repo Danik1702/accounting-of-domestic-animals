@@ -2,9 +2,137 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 60%;
+  background-color: #1F212B;
 }
 
 .pr-form {
   width: 70%;
   margin: 0 auto;
+}
+
+.pr-form-header-container {
+  padding-bottom: 30px;
+  text-align: center;
+  border-bottom: 2px solid #dbdbdb;
+  margin-bottom: 30px;
+}
+
+.pr-form-header {
+  color: #ffffff;
+  font-size: 26px;
+  line-height: 30px;
+}
+
+.pr-form-label {
+  display: block;
+  font-size: 20px;
+  line-height: 23px;
+  color: #ffffff;
+  margin: 15px 0 5px;
+}
+
+.pr-form-field {
+  background: #dbdbdb;
+  border-radius: 10px;
+  width: 96%;
+  padding: 5px 2%;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  border: 1px solid #dbdbdb;
+}
+
+.pr-form-field:focus {
+  border-color: #ed7a7a;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px #ed7a7a;
+}
+
+.pr-form-select {
+  width: 100%;
+  cursor: pointer;
+}
+
+.pr-form-date {
+  background: #dbdbdb;
+  border-radius: 10px;
+  width: 44%;
+  padding: 5px 3%;
+  border: none;
+  font-size: 16px;
+  outline: none;
+  cursor: text;
+  border: 1px solid #dbdbdb;
+}
+
+.pr-form-date:focus {
+  border-color: #ed7a7a;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px #ed7a7a;
+}
+
+.pr-form-radio-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.pr-form-radio {
+  width: 20px;
+  margin-right: 7px;
+  cursor: pointer;
+}
+
+.pr-form-radio-text {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.pr-form-submit-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.pr-form-submit {
+  background: #ed7a7a;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 28px;
+  border: none;
+  padding: 5px 15px;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid #ed7a7a;
+  transition-duration: 1s;
+}
+
+.pr-form-submit:hover {
+  color: #ed7a7a;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px #ed7a7a;
+}
+
+.pr-form-undo {
+  background-color: #a1a1a1;
+  border-radius: 10px;
+  font-size: 24px;
+  line-height: 28px;
+  padding: 5px 25px;
+  cursor: pointer;
+  border: 1px solid #a1a1a1;
+  transition-duration: 1s;
+}
+
+.pr-form-undo:hover {
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  box-shadow: 0 0 5px #ffffff;
+}
+
+.pr-form-validation {
+  color: rgb(170, 19, 19);
 }
