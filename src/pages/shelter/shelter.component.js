@@ -31,11 +31,15 @@ export const Shelter = () => {
         <Header />
         <div className="shelter-page-wrapper">
           <ShelterHeader />
+        </div>
           <SeparateShelter 
             name='ЛКП Лев'
             dogs={shelters.lkpLion}
           />
-        </div>
+          <SeparateShelter 
+            name='Милосердя'
+            dogs={shelters.mercy}
+          />
         <Footer />
       </>
     );

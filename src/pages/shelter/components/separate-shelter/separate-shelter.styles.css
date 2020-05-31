@@ -1,0 +1,65 @@
+.ss-header {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 30px;
+  line-height: 35px;
+  color: #ffffff;
+}
+
+.ss-container {
+  background: #434343;
+  box-shadow: 0px 0px 10px #d24141;
+  padding: 38px 0;
+}
+
+.ss-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.ss-dog {
+  background: #e1e1e1;
+  border-radius: 15px;
+  width: 25%;
+  cursor: pointer;
+  transition-duration: 1s;
+}
+
+.ss-dog:hover {
+    background: #696969;
+    color: #ffffff;
+    box-shadow: 0 0 20px #ffffff;
+}
+
+.ss-dog-image-container {
+  max-width: 100%;
+  border-radius: 15px 15px 0 0;
+}
+
+.ss-dog-name-container {
+  text-align: center;
+}
+
+.ss-dog-name {
+  font-size: 20px;
+  line-height: 23px;
+  margin-bottom: 10px;
+}
+
+.ss-dog-characteristics {
+  margin: 0px 20px 20px;
+}
+
+.ss-dog-characteristic-value {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.ss-dog-characteristic-title {
+  font-style: italic;
+  color: #424242;
+  font-size: 20px;  
+  margin-right: 10px;
+}

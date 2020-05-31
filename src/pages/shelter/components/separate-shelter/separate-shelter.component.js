@@ -37,11 +37,11 @@ export const SeparateShelter = (props) => {
   };
 
   return (
-    <div className="ss-container">
+    <>
       <h2 className="ss-header">{props.name}</h2>
-      <div className="ss-body">
-          {renderDogs()}
+      <div className="ss-container">
+        <div className="ss-body">{renderDogs()}</div>
       </div>
-    </div>
+    </>
   );
 };
