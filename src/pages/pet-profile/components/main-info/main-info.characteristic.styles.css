@@ -1,0 +1,14 @@
+.pp-characteristic {
+    text-align: center;
+}
+
+.pp-characteristic-title {
+  font-size: 20px;
+  line-height: 23px;
+  color: #464646;
+}
+
+.pp-characteristic-value {
+  font-size: 26px;
+  line-height: 30px;
+}

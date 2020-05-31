@@ -39,16 +39,18 @@ export const PetProfile = () => {
             petPhoto={pet.imageUrl}
             name={`${userInfo.additionalInfo.firstName} ${userInfo.additionalInfo.lastName}`}
           />
+          <MainInfo 
+            name={pet.name}
+            breed={pet.breed}
+            age={pet.age}
+            gender={pet.gender}
+            id={pet.id}
+          />
         </div>
         <Footer />
       </>
     );
   };
-
-  // const logData = () => {
-  //   console.log(pet);
-  //   console.log(userInfo);
-  // }
 
   return renderContent();
 };

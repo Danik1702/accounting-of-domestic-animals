@@ -1,0 +1,7 @@
+.pp-main-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: #c4c4c4;
+  padding: 10px 0;
+}
