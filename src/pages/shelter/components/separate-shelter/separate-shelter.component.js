@@ -1,5 +1,7 @@
 import React from "react";
 
+import alternativePhoto from '../../../../images/care-page-dog.svg';
+
 import "./separate-shelter.styles.css";
 
 export const SeparateShelter = (props) => {
@@ -9,7 +11,7 @@ export const SeparateShelter = (props) => {
         <div className="ss-dog" key={index}>
           <div className="ss-dog-image-container">
             <img
-              src={dog.imageUrl}
+              src={dog.imageUrl || alternativePhoto}
               className="ss-dog-image-container"
               alt="dog"
             />
