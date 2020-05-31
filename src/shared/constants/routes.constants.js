@@ -4,7 +4,7 @@ export const ROUTES = {
   careCheckResult: "/care-check-result",
   losePet: "/lose-pet",
   petFinder: "/pet-finder",
-  petProfile: "/pet-profile/:id",
+  petProfile: "/pet-profile",
   petRegistration: "/pet-registration",
   shelter: "/shelter",
   userProfile: "/user-profile",
