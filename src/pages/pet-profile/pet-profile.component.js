@@ -47,6 +47,7 @@ export const PetProfile = () => {
             id={pet.id}
           />
           <AdditionalInfo info={pet.additionalInfo} />
+          <CareInfo care={pet.care} />
         </div>
         <Footer />
       </>

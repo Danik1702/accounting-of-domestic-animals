@@ -1,0 +1,38 @@
+.pp-care-info {
+  background-color: #c4c4c4;
+  padding: 15px 150px;
+  margin-top: 40px;
+}
+
+.pp-care-info-header {
+  text-align: center;
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 10px;
+}
+
+.pp-care-info-edit-container {
+  text-align: center;
+}
+
+.pp-care-info-edit {
+  display: inline-block;
+  margin: 10px 0 20px;
+  text-align: center;
+  font-size: 18px;
+  text-transform: uppercase;
+  background: #e64e4e;
+  border: 1px solid #e64e4e;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  color: #ffffff;
+  padding: 3px 15px;
+  cursor: pointer;
+  transition-duration: 1s;
+}
+
+.pp-care-info-edit:hover {
+  background-color: #ffffff;
+  color: #e64e4e;
+  box-shadow: 0px 4px 4px #e64e4e;
+}
