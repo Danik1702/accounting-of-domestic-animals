@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import { Characteristic } from "./characteristic/characteristic.component";
 import { EditModal } from "./edit-modal/edit-modal.component";
+import API from '../../../../shared/apis/server-api';
 
 import "./additional-info.styles.css";
 
@@ -15,6 +16,17 @@ export const AdditionalInfo = (props) => {
   const handleCloseModal = () => {
     setIsOpen(false);
   };
+
+  const onFormSubmit = data => {
+    const changeData = async () => {
+      await API.patch('/pets/07400401', { additionalInfo: { ...data } });
+    }
+
+    changeData();
+
+    handleCloseModal();
+  }
+
 
   return (
     <div className="pp-additional-info-container">
@@ -42,6 +54,7 @@ export const AdditionalInfo = (props) => {
           isOpen={isOpen}
           handleCloseModal={handleCloseModal}
           info={props.info}
+          onFormSubmit={onFormSubmit}
         />
       </div>
     </div>

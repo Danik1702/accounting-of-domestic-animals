@@ -50,6 +50,7 @@
   color: #ffffff;
   letter-spacing: 2px;
   cursor: pointer;
+  outline: none;
   transition-duration: 1s;
 }
 
