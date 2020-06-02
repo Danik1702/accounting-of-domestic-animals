@@ -26,3 +26,13 @@
   font-weight: normal;
   margin-right: 10px;
 }
+
+.pp-owner-name {
+  cursor: pointer;
+  transition-duration: 1s;
+}
+
+.pp-owner-name:hover {
+  color: #E54E4E;
+  text-shadow: 0 0 5px #ffffff;
+}

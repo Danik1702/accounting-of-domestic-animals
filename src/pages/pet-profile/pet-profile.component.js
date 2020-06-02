@@ -38,6 +38,7 @@ export const PetProfile = () => {
           <PageHeader
             petPhoto={pet.imageUrl}
             name={`${userInfo.additionalInfo.firstName} ${userInfo.additionalInfo.lastName}`}
+            userId={pet.userId}
           />
           <MainInfo
             name={pet.name}
