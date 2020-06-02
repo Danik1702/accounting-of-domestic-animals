@@ -1,0 +1,81 @@
+.pp-modal {
+  width: 36%;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 0 2%;
+  background-color: #444;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid #e54e4e;
+  box-shadow: 0 0 20px #e54e4e;
+}
+
+.pp-edit-label {
+  display: block;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  margin: 15px 0 5px;
+}
+
+.pp-edit-field {
+  width: 94%;
+  padding: 5px 3%;
+  outline: none;
+  font-size: 16px;
+  background-color: #dddddd;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+}
+
+.pp-edit-field:focus {
+  background-color: #ffffff;
+  border-color: #e54e4e;
+  box-shadow: 0 0 5px #e54e4e;
+}
+
+.pp-edit-submit {
+  margin: 30px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.pp-edit-submit-button {
+  font-size: 18px;
+  width: 150px;
+  padding: 5px 0;
+  border-radius: 5px;
+  border: 1px solid rgb(54, 161, 54);
+  background-color: rgb(54, 161, 54);
+  color: #ffffff;
+  letter-spacing: 2px;
+  cursor: pointer;
+  outline: none;
+  transition-duration: 1s;
+}
+
+.pp-edit-submit-button:hover {
+  border-color: rgb(54, 161, 54);
+  box-shadow: 0 0 10px rgb(54, 161, 54);
+  background-color: #ffffff;
+  color: rgb(54, 161, 54);
+}
+
+.pp-edit-undo {
+  width: 150px;
+  text-align: center;
+  font-size: 18px;
+  padding: 5px 0;
+  border-radius: 5px;
+  border: 1px solid #999999;
+  background-color: #999999;
+  cursor: pointer;
+  letter-spacing: 2px;
+  transition-duration: 1s;
+}
+
+.pp-edit-undo:hover {
+  border-color: #ffffff;
+  box-shadow: 0 0 10px #ffffff;
+  color: #ffffff;
+}
