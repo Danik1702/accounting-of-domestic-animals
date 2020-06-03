@@ -18,18 +18,30 @@ export const Filter = (props) => {
     );
   };
 
+  const renderSelect = () => {
+    if (!props.breeds.length) {
+      return;
+    }
+
+    return props.breeds.map((breed, index) => {
+      return (
+        <option key={index} value={breed}>
+          {breed}
+        </option>
+      );
+    });
+  };
+
   return (
     <div className="pf-filter-container">
       <form onSubmit={handleSubmit(props.onFormSubmit)}>
         <div className="pf-filter">
           <div className="pf-separate-filter">
             <label className="pf-filter-label">Стать песика</label>
-            <input
-              name="gender"
-              className="pf-filter-field"
-              placeholder="Хлопчик.."
-              ref={register}
-            />
+            <select className="pf-filter-field" name="gender" ref={register}>
+              <option value="Хлопчик">Хлопчик</option>
+              <option value="Дівчинка">Дівчинка</option>
+            </select>
           </div>
           <div className="pf-separate-filter">
             <label className="pf-filter-label">Кличка тварини</label>
@@ -42,7 +54,9 @@ export const Filter = (props) => {
           </div>
           <div className="pf-separate-filter">
             <label className="pf-filter-label">Порода собачки</label>
-            <input name="breed" className="pf-filter-field" ref={register} />
+            <select name="breed" className="pf-filter-field" ref={register}>
+              {renderSelect()}
+            </select>
           </div>
         </div>
         <div className="pf-filter-submit">

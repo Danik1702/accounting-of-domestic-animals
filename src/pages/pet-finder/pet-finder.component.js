@@ -13,12 +13,15 @@ export const PetFinder = () => {
   const [pets, setPets] = useState([]);
   const [searchValue, setSearchValue] = useState("");
   const [filterData, setFilterData] = useState({});
+  const [breeds, setBreeds] = useState([]);
 
   useEffect(() => {
     const getPets = async () => {
       const petsFromServer = await API.get("/pets");
+      const BreedsFromServer = await API.get("breeds");
 
       setPets(petsFromServer.data);
+      setBreeds(BreedsFromServer.data);
     };
 
     getPets();
@@ -114,6 +117,7 @@ export const PetFinder = () => {
             onFormSubmit={onFormSubmit}
             onUndoFilterClick={onUndoFilterClick}
             filterData={filterData}
+            breeds={breeds}
           />
           {renderPets(searchValue, filterData)}
         </div>
