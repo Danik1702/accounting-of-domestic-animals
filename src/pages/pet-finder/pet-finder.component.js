@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 
 import { Header } from "../../shared/components/header/header.component";
 import { Footer } from "../../shared/components/footer/footer.component";
@@ -6,6 +7,7 @@ import { Search } from "./components/search/search.component";
 import { Filter } from "./components/filter/filter.component";
 import API from "../../shared/apis/server-api";
 import { Characteristic } from "../../shared/components/characteristic/characteristic.component";
+import { ROUTES } from "../../shared/constants/routes.constants";
 
 import "./pet-finder.styles.css";
 
@@ -14,6 +16,8 @@ export const PetFinder = () => {
   const [searchValue, setSearchValue] = useState("");
   const [filterData, setFilterData] = useState({});
   const [breeds, setBreeds] = useState([]);
+
+  const history = useHistory();
 
   useEffect(() => {
     const getPets = async () => {
@@ -26,6 +30,10 @@ export const PetFinder = () => {
 
     getPets();
   }, []);
+
+  const onPetClick = () => {
+    history.push(ROUTES.petProfile);
+  };
 
   const renderPets = (searchValue, filterValues) => {
     if (!pets.length) {
@@ -60,7 +68,7 @@ export const PetFinder = () => {
 
       return petsForRednder.map((pet) => {
         return (
-          <div className="pf-pet" key={pet.id}>
+          <div className="pf-pet" key={pet.id} onClick={onPetClick}>
             <div className="pf-pet-image-container">
               <img src={pet.imageUrl} className="pf-pet-image" alt="pet" />
             </div>
