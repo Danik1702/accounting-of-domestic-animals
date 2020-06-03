@@ -99,6 +99,10 @@ export const PetFinder = () => {
     }
   };
 
+  const onUndoFilterClick = () => {
+    setFilterData({});
+  };
+
   return (
     <>
       <Header />
@@ -106,7 +110,11 @@ export const PetFinder = () => {
         <div className="pf-header-container">
           <h2 className="pf-header">Знайти</h2>
           <Search onInputChange={onInputChange} />
-          <Filter onFormSubmit={onFormSubmit} />
+          <Filter
+            onFormSubmit={onFormSubmit}
+            onUndoFilterClick={onUndoFilterClick}
+            filterData={filterData}
+          />
           {renderPets(searchValue, filterData)}
         </div>
       </div>

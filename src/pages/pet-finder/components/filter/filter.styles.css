@@ -63,3 +63,23 @@
   border-color: #ffffff;
   box-shadow: 0 0 10px #ffffff;
 }
+
+.pf-filter-undo-button {
+  display: inline-block;
+  width: 200px;
+  background-color: #999999;
+  font-size: 16px;
+  text-transform: uppercase;
+  border: 1px solid #999999;
+  padding: 2px 0;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-left: 30px;
+  transition-duration: 1s;
+}
+
+.pf-filter-undo-button:hover {
+  color: #ffffff;
+  border-color: #ffffff;
+  box-shadow: 0 0 10px #ffffff;
+}

@@ -6,6 +6,18 @@ import "./filter.styles.css";
 export const Filter = (props) => {
   const { register, handleSubmit } = useForm();
 
+  const renderUndoButton = () => {
+    if (!Object.values(props.filterData).length) {
+      return;
+    }
+
+    return (
+      <div className="pf-filter-undo-button" onClick={props.onUndoFilterClick}>
+        Скинути фільтр
+      </div>
+    );
+  };
+
   return (
     <div className="pf-filter-container">
       <form onSubmit={handleSubmit(props.onFormSubmit)}>
@@ -24,7 +36,7 @@ export const Filter = (props) => {
             <input
               name="petName"
               className="pf-filter-field"
-              placeholder="Доберман..."
+              placeholder="Марсік..."
               ref={register}
             />
           </div>
@@ -39,6 +51,7 @@ export const Filter = (props) => {
             className="pf-filter-submit-button"
             value="Застосувати"
           />
+          {renderUndoButton()}
         </div>
       </form>
     </div>
