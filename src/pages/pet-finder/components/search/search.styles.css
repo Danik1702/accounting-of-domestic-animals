@@ -7,7 +7,13 @@
   padding: 10px 0 10px 3%;
   background: #d7d6d6;
   border-radius: 10px;
-  border: none;
+  border: 1px solid #d7d6d6;
   font-size: 16px;
   outline: none;
+}
+
+.pf-search:focus {
+  background-color: #ffffff;
+  border-color: #d7b1e3;
+  box-shadow: 0 0 10px #d7b1e3;
 }

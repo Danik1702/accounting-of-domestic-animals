@@ -1,18 +1,22 @@
 import React from "react";
+import { useForm } from "react-hook-form";
 
 import "./filter.styles.css";
 
 export const Filter = (props) => {
+  const { register, handleSubmit } = useForm();
+
   return (
     <div className="pf-filter-container">
-      <form>
+      <form onSubmit={handleSubmit(props.onFormSubmit)}>
         <div className="pf-filter">
           <div className="pf-separate-filter">
-            <label className="pf-filter-label">Ім'я та прізвище власника</label>
+            <label className="pf-filter-label">Стать песика</label>
             <input
-              name="name"
+              name="gender"
               className="pf-filter-field"
-              placeholder="Олег Винник..."
+              placeholder="Хлопчик.."
+              ref={register}
             />
           </div>
           <div className="pf-separate-filter">
@@ -21,11 +25,12 @@ export const Filter = (props) => {
               name="petName"
               className="pf-filter-field"
               placeholder="Доберман..."
+              ref={register}
             />
           </div>
           <div className="pf-separate-filter">
             <label className="pf-filter-label">Порода собачки</label>
-            <input name="breed" className="pf-filter-field" />
+            <input name="breed" className="pf-filter-field" ref={register} />
           </div>
         </div>
         <div className="pf-filter-submit">

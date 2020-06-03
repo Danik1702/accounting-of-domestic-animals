@@ -54,3 +54,9 @@
   justify-content: space-around;
   margin-bottom: 20px;
 }
+
+.pf-search-fail {
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 24px;
+}

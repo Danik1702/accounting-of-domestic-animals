@@ -33,6 +33,12 @@
   font-size: 14px;
 }
 
+.pf-filter-field:focus {
+  border-color: #D7B1E3;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px #D7B1E3;
+}
+
 .pf-filter-submit {
   margin-top: 20px;
   margin-bottom: 15px;
