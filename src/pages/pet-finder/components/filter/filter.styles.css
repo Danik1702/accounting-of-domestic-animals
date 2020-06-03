@@ -1,0 +1,59 @@
+.pf-filter-container {
+  background: #5c5b5b;
+  border-radius: 10px;
+  padding: 10px 30px;
+}
+
+.pf-filter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pf-separate-filter {
+  width: 100%;
+  text-align: center;
+}
+
+.pf-filter-label {
+  display: block;
+  font-size: 18px;
+  line-height: 21px;
+  color: #d7d5d5;
+  margin-bottom: 5px;
+}
+
+.pf-filter-field {
+  background: #d7d6d6;
+  border-radius: 5px;
+  width: 75%;
+  padding: 3px 0;
+  padding-left: 3%;
+  border: 1px solid #d7d6d6;
+  outline: none;
+  font-size: 14px;
+}
+
+.pf-filter-submit {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.pf-filter-submit-button {
+  width: 200px;
+  background: #D7B1E3;
+  font-size: 16px;
+  text-transform: uppercase;
+  border: 1px solid #D7B1E3;
+  outline: none;
+  padding: 2px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition-duration: 1s;
+}
+
+.pf-filter-submit-button:hover {
+  color: #ffffff;
+  border-color: #ffffff;
+  box-shadow: 0 0 10px #ffffff;
+}

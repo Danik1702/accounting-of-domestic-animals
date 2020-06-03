@@ -8,7 +8,7 @@ export const Filter = (props) => {
       <form>
         <div className="pf-filter">
           <div className="pf-separate-filter">
-            <label clasName="pf-filter-label">Ім'я та прізвище власника</label>
+            <label className="pf-filter-label">Ім'я та прізвище власника</label>
             <input
               name="name"
               className="pf-filter-field"
@@ -16,7 +16,7 @@ export const Filter = (props) => {
             />
           </div>
           <div className="pf-separate-filter">
-            <label clasName="pf-filter-label">Кличка тварини</label>
+            <label className="pf-filter-label">Кличка тварини</label>
             <input
               name="petName"
               className="pf-filter-field"
@@ -24,7 +24,7 @@ export const Filter = (props) => {
             />
           </div>
           <div className="pf-separate-filter">
-            <label clasName="pf-filter-label">Порода собачки</label>
+            <label className="pf-filter-label">Порода собачки</label>
             <input name="breed" className="pf-filter-field" />
           </div>
         </div>
