@@ -1,0 +1,79 @@
+.vp-pets-container {
+  margin-top: 40px;
+}
+
+.vp-pet {
+  background: #dedede;
+  border-radius: 20px;
+  width: 30%;
+  transition-duration: 1s;
+  border: 1px solid #dedede;
+}
+
+.vp-pet:hover {
+  box-shadow: 0px 0px 10px #d7b1e3;
+  border-color: #d7b1e3;
+  background: #ffffff;
+}
+
+.vp-main-info {
+  cursor: pointer;
+}
+
+.vp-details {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.vp-detail {
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.vp-detail-title {
+  font-style: italic;
+  margin-right: 5px;
+}
+
+.vp-more-info {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.vp-more-info-button {
+  width: 200px;
+  background: #d7b1e3;
+  border: 1px solid #9830bd;
+  box-sizing: border-box;
+  border-radius: 21px;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+  cursor: pointer;
+  margin: 0 auto;
+  padding: 3px 0;
+  transition-duration: 1s;
+}
+
+.vp-more-info-button:hover {
+  border-color: #000000;
+  box-shadow: 0 0 5px #000000;
+  color: #000000;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.vp-pets-absence {
+  margin: 30px 0;
+  color: #ffffff;
+  font-size: 22px;
+  line-height: 24px;
+}

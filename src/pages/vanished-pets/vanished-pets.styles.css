@@ -1,0 +1,23 @@
+.vp-wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.vp-header-container {
+  margin-top: 40px;
+  padding-bottom: 40px;
+  border-bottom: 2px solid #d7b1e3;
+}
+
+.vp-header-title {
+  color: #ffffff;
+  font-size: 30px;
+  line-height: 35px;
+  margin-bottom: 20px;
+}
+
+.vp-header-text {
+  font-size: 24px;
+  line-height: 28px;
+  color: #d4d4d4;
+}
