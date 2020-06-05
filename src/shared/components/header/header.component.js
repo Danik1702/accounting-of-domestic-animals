@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import { useForm } from "react-hook-form";
+import { useHistory, Link } from 'react-router-dom';
 
+import { ROUTES } from '../../constants/routes.constants';
 import logo from "../../../images/logo.png";
 
 import "./header.styles.css";
@@ -11,6 +13,8 @@ Modal.setAppElement("#root");
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { register, handleSubmit, errors } = useForm();
+
+  const history = useHistory();
 
   const handleOpenModal = () => {
     setIsOpen(true);
@@ -23,6 +27,10 @@ export const Header = () => {
   const onFormSubmit = data => {
     console.log(data);
   };
+
+  const onRegistrationClick = () => {
+    history.push(ROUTES.userRegistration);
+  }
 
   const renderModal = () => {
     return (
@@ -76,19 +84,21 @@ export const Header = () => {
           <img src={logo} className="header-logo" alt="logo" />
         </div>
         <ul className="list-container">
-          <li className="list-container__link">Головна</li>
-          <li className="list-container__link">Зниклі тварини</li>
-          <li className="list-container__link">Приют</li>
-          <li className="list-container__link">На скільки хороший я власник</li>
+          <li className="list-container__link"><Link to={ROUTES.landing} className="list-container-route">Головна</Link></li>
+          <li className="list-container__link"><Link to={ROUTES.vanishedPets} className="list-container-route">Зниклі тварини</Link></li>
+          <li className="list-container__link"><Link to={ROUTES.shelter} className="list-container-route">Приют</Link></li>
+          <li className="list-container__link"><Link to={ROUTES.careCheck} className="list-container-route">Перевірка догляду</Link></li>
+          <li className="list-container__link"><Link to={ROUTES.petFinder} className="list-container-route">Пошук</Link></li>
         </ul>
         <div className="buttons-container">
           <div className="sign-in button" onClick={handleOpenModal}>
             Вхід
           </div>
           {renderModal()}
-          <div className="sign-up button">Реєстрація</div>
+          <div className="sign-up button" onClick={onRegistrationClick}>Реєстрація</div>
         </div>
       </div>
     </div>
   );
 };
+
