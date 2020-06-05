@@ -20,7 +20,9 @@ export const UserProfile = () => {
       info.data.pets.forEach(async (petId) => {
         const pet = await API.get(`/pets/${petId}`);
 
-        setUserPets([...userPets, pet.data]);
+        setUserPets((state) => {
+          return [...state, pet.data];
+        });
       });
 
       setUserData(info.data);
@@ -49,5 +51,6 @@ export const UserProfile = () => {
     );
   };
 
+  
   return renderHelper();
 };

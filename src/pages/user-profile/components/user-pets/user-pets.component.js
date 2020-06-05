@@ -1,13 +1,17 @@
 import React from "react";
-import { useHistory } from 'react-router-dom';
+import { useHistory } from "react-router-dom";
 
-import { ROUTES } from '../../../../shared/constants/routes.constants';
+import { ROUTES } from "../../../../shared/constants/routes.constants";
 import petPhoto from "../../../../images/dog-profile.png";
 
 import "./user-pets.styles.css";
 
 export const UserPets = (props) => {
   const history = useHistory();
+
+  const onPetClick = () => {
+    history.push(ROUTES.petProfile);
+  };
 
   const renderPets = () => {
     if (!props.pets.length) {
@@ -20,7 +24,7 @@ export const UserPets = (props) => {
 
     return props.pets.map((pet, index) => {
       return (
-        <div className="up-pet-container" key={index}>
+        <div className="up-pet-container" key={index} onClick={onPetClick}>
           <div className="up-pet-info">
             <img src={petPhoto} className="up-pet-photo" alt="pet" />
             <p className="up-pet-name">{pet.name}</p>
