@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import { useForm } from "react-hook-form";
-import { useHistory, Link } from 'react-router-dom';
+import { useHistory, Link } from "react-router-dom";
 
-import { ROUTES } from '../../constants/routes.constants';
+import { ROUTES } from "../../constants/routes.constants";
 import logo from "../../../images/logo.png";
 
 import "./header.styles.css";
@@ -24,13 +24,17 @@ export const Header = () => {
     setIsOpen(false);
   };
 
-  const onFormSubmit = data => {
+  const onFormSubmit = (data) => {
     console.log(data);
   };
 
   const onRegistrationClick = () => {
     history.push(ROUTES.userRegistration);
-  }
+  };
+
+  const onLogoClick = () => {
+    history.push(ROUTES.landing);
+  };
 
   const renderModal = () => {
     return (
@@ -50,7 +54,11 @@ export const Header = () => {
               className="sign-in-field"
               ref={register({ required: true })}
             />
-            {errors.email && <p className="log-in-validation">Введіть адресу електронної пошти</p>}
+            {errors.email && (
+              <p className="log-in-validation">
+                Введіть адресу електронної пошти
+              </p>
+            )}
 
             <label className="sign-in-label">Пароль</label>
             <input
@@ -59,7 +67,9 @@ export const Header = () => {
               className="sign-in-field"
               ref={register({ required: true })}
             />
-            {errors.password && <p className="log-in-validation">Введіть пароль</p>}
+            {errors.password && (
+              <p className="log-in-validation">Введіть пароль</p>
+            )}
 
             <div className="sign-in-submit">
               <input
@@ -81,24 +91,50 @@ export const Header = () => {
     <div className="header-container">
       <div className="wrapper">
         <div className="logo-container">
-          <img src={logo} className="header-logo" alt="logo" />
+          <img
+            src={logo}
+            className="header-logo"
+            alt="logo"
+            onClick={onLogoClick}
+          />
         </div>
         <ul className="list-container">
-          <li className="list-container__link"><Link to={ROUTES.landing} className="list-container-route">Головна</Link></li>
-          <li className="list-container__link"><Link to={ROUTES.vanishedPets} className="list-container-route">Зниклі тварини</Link></li>
-          <li className="list-container__link"><Link to={ROUTES.shelter} className="list-container-route">Приют</Link></li>
-          <li className="list-container__link"><Link to={ROUTES.careCheck} className="list-container-route">Перевірка догляду</Link></li>
-          <li className="list-container__link"><Link to={ROUTES.petFinder} className="list-container-route">Пошук</Link></li>
+          <li className="list-container__link">
+            <Link to={ROUTES.landing} className="list-container-route">
+              Головна
+            </Link>
+          </li>
+          <li className="list-container__link">
+            <Link to={ROUTES.vanishedPets} className="list-container-route">
+              Зниклі тварини
+            </Link>
+          </li>
+          <li className="list-container__link">
+            <Link to={ROUTES.shelter} className="list-container-route">
+              Приют
+            </Link>
+          </li>
+          <li className="list-container__link">
+            <Link to={ROUTES.careCheck} className="list-container-route">
+              Перевірка догляду
+            </Link>
+          </li>
+          <li className="list-container__link">
+            <Link to={ROUTES.petFinder} className="list-container-route">
+              Пошук
+            </Link>
+          </li>
         </ul>
         <div className="buttons-container">
           <div className="sign-in button" onClick={handleOpenModal}>
             Вхід
           </div>
           {renderModal()}
-          <div className="sign-up button" onClick={onRegistrationClick}>Реєстрація</div>
+          <div className="sign-up button" onClick={onRegistrationClick}>
+            Реєстрація
+          </div>
         </div>
       </div>
     </div>
   );
 };
-
