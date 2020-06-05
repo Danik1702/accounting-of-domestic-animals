@@ -92,8 +92,7 @@
 
 .cc-form-submit-button {
   background: #1c1a1a;
-  border: 2px solid #a33bd3;
-  box-sizing: border-box;
+  border: 1px solid #a33bd3;
   border-radius: 22px;
   font-size: 20px;
   line-height: 23px;
@@ -101,6 +100,14 @@
   padding: 3px 20px;
   cursor: pointer;
   outline: none;
+  transition-duration: 1s;
+}
+
+.cc-form-submit-button:hover {
+  background-color: #a33bd3;
+  color: #ffffff;
+  border-color: #ffffff;
+  box-shadow: 0 0 5px #ffffff;
 }
 
 .cc-form-range::-webkit-slider-thumb {
