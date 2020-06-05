@@ -26,4 +26,5 @@
 .landing-menu-active {
   background-color: #9830bd;
   color: #ffffff;
+  text-shadow: 0 0 5px #000000;
 }
