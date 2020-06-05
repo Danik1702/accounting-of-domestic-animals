@@ -53,7 +53,10 @@ export const Landing = () => {
           </h1>
         </div>
       </div>
-      <LandingMenu onLandingMenuClick={onLandingMenuClick} />
+      <LandingMenu
+        onLandingMenuClick={onLandingMenuClick}
+        landingNumber={landingNumber}
+      />
       {renderHelper()}
       <Footer />
     </div>

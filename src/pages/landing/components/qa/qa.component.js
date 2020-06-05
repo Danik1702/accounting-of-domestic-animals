@@ -61,7 +61,7 @@ export const QA = () => {
             </div>
           </div>
         </div>
-        <div classnName="more-button-container">
+        <div className="more-button-container">
           <div className="more-button">Більше</div>
         </div>
       </div>

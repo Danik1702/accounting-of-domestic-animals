@@ -1,23 +1,29 @@
 .landing-menu {
-    width: 80%;
-    margin: 0 auto;
-    background-color: #E7E7E7;
-    border-radius: 25px;
-    position: relative;
-    top: -22px;
+  width: 75%;
+  margin: 0 auto;
+  background-color: #e7e7e7;
+  border-radius: 25px;
+  position: relative;
+  top: -22px;
 }
 
 .landing-menu__list {
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .landing-menu__list__item {
-    font-size: 20px;
-    line-height: 24px;
-    padding: 10px 0;
-    text-transform: uppercase;
-    cursor: pointer;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 10px 58px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.landing-menu-active {
+  background-color: #9830bd;
+  color: #ffffff;
 }
