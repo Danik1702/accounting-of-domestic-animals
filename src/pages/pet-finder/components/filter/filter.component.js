@@ -39,6 +39,7 @@ export const Filter = (props) => {
           <div className="pf-separate-filter">
             <label className="pf-filter-label">Стать песика</label>
             <select className="pf-filter-field" name="gender" ref={register}>
+              <option value=""></option>
               <option value="Хлопчик">Хлопчик</option>
               <option value="Дівчинка">Дівчинка</option>
             </select>
@@ -55,6 +56,7 @@ export const Filter = (props) => {
           <div className="pf-separate-filter">
             <label className="pf-filter-label">Порода собачки</label>
             <select name="breed" className="pf-filter-field" ref={register}>
+              <option value=""></option>
               {renderSelect()}
             </select>
           </div>

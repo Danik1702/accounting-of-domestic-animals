@@ -27,7 +27,7 @@
 .list-container__link {
   display: inline-block;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 18px;
   font-weight: 600;
   margin-left: 30px;
@@ -41,15 +41,31 @@
 .sign-in {
   background-color: #9830bd;
   margin-bottom: 7px;
+  border: 1px solid #9830bd;
+  transition-duration: 1s;
+}
+
+.sign-in:hover {
+  background-color: #ffffff;
+  color: #9830bd;
+  box-shadow: 0 0 5px #9830bd;
 }
 
 .sign-up {
   background-color: #e64e4e;
+  border: 1px solid #e64e4e;
+  transition-duration: 1s;
+}
+
+.sign-up:hover {
+  background-color: #ffffff;
+  color: #e64e4e;
+  box-shadow: 0 0 5px #e64e4e;
 }
 
 .button {
   width: 97px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0 5px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   font-size: 14px;
   line-height: 16px;
@@ -57,6 +73,16 @@
   text-align: center;
   padding: 2px;
   cursor: pointer;
+}
+
+.list-container-route {
+  text-decoration: none;
+  color: #000000;
+}
+
+.header-active-page {
+  color: #e64e4e;
+  text-shadow: 0 0 5px #ffffff;
 }
 
 /* Log-in modal window styles */

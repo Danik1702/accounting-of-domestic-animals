@@ -41,13 +41,21 @@
 .add-review-button {
   padding: 3px 20px;
   background: #1c1a1a;
-  border: 2px solid #9830bd;
+  border: 1px solid #9830bd;
   box-sizing: border-box;
   border-radius: 22px;
   font-size: 16px;
   line-height: 18px;
   color: #9830bd;
   cursor: pointer;
+  transition-duration: 1s;
+}
+
+.add-review-button:hover {
+  color: #ffffff;
+  border-color: #ffffff;
+  background-color: #9830bd;
+  box-shadow: 0 0 5px #ffffff;
 }
 
 .review {
@@ -93,7 +101,7 @@
 
 .more-button {
   background: #1c1a1a;
-  border: 2px solid #e54e4e;
+  border: 1px solid #e54e4e;
   box-sizing: border-box;
   border-radius: 22px;
   padding: 12px 25px;
@@ -101,4 +109,12 @@
   font-size: 14px;
   line-height: 16px;
   cursor: pointer;
+  transition-duration: 1s;
+}
+
+.more-button:hover {
+  color: #ffffff;
+  border-color: #ffffff;
+  box-shadow: 0 0 5px #ffffff;
+  background-color: #e54e4e;
 }

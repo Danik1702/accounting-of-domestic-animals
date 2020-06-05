@@ -22,7 +22,7 @@ export const PetFinder = () => {
   useEffect(() => {
     const getPets = async () => {
       const petsFromServer = await API.get("/pets");
-      const BreedsFromServer = await API.get("breeds");
+      const BreedsFromServer = await API.get("/breeds");
 
       setPets(petsFromServer.data);
       setBreeds(BreedsFromServer.data);
@@ -94,7 +94,7 @@ export const PetFinder = () => {
       );
     }
 
-    return <div className="pf-pets-container">{petsList()}</div>;
+    return <div className="pf-pets-container">{petsForRender}</div>;
   };
 
   const onInputChange = (e) => {
@@ -104,7 +104,6 @@ export const PetFinder = () => {
   const onFormSubmit = (data) => {
     if (data.gender || data.petName || data.breed) {
       setFilterData(data);
-      console.log(data);
     } else {
       setFilterData({});
     }

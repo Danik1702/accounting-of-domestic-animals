@@ -58,6 +58,7 @@
 
 .up-pets-add-pet-button {
   font-size: 14px;
+  margin-bottom: 20px;
   line-height: 16px;
   padding: 5px 20px;
   background: linear-gradient(270deg, #1c1a1a 0%, #ffffff 100%);

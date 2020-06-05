@@ -1,6 +1,8 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { useHistory } from "react-router-dom";
 
+import { ROUTES } from "../../shared/constants/routes.constants";
 import logo from "../../images/logo.png";
 import image from "../../images/reg-page-photo.svg";
 
@@ -9,6 +11,12 @@ import "./user-registration.styles.css";
 export const UserRegistration = () => {
   const { register, handleSubmit, errors } = useForm();
 
+  const history = useHistory();
+
+  const onLogoClick = () => {
+    history.push(ROUTES.landing);
+  };
+
   const onFormSubmit = (data) => {
     console.log(data);
   };
@@ -16,7 +24,7 @@ export const UserRegistration = () => {
   const renderLeftSide = () => {
     return (
       <>
-        <img src={logo} className="reg-logo" alt="logo" />
+        <img src={logo} className="reg-logo" alt="logo" onClick={onLogoClick} />
         <img src={image} className="reg-page-image" alt="dog-with-peoples" />
       </>
     );
@@ -28,9 +36,7 @@ export const UserRegistration = () => {
         <div className="reg-form-wrapper">
           <form onSubmit={handleSubmit(onFormSubmit)} className="reg-form">
             <div className="google-container">
-              <div className="google-registartion user-reg-button">
-                Зареєструватсия з допомогою Google
-              </div>
+              <h2 className="ur-header">Створіть власний обліковий запис</h2>
             </div>
 
             <div className="name-container">
@@ -51,13 +57,21 @@ export const UserRegistration = () => {
                   className="name-input input-field"
                   ref={register({ required: true })}
                 />
-                {errors.lastName && <p className="reg-error">Вкажіть прізвище</p>}
+                {errors.lastName && (
+                  <p className="reg-error">Вкажіть прізвище</p>
+                )}
               </div>
             </div>
 
             <label className="label">Адреса електронної пошти</label>
-            <input name="email" className="input-field" ref={register({ required: true })} />
-            {errors.email && <p className="reg-error">Вкажіть адресу електронної пошти</p>}
+            <input
+              name="email"
+              className="input-field"
+              ref={register({ required: true })}
+            />
+            {errors.email && (
+              <p className="reg-error">Вкажіть адресу електронної пошти</p>
+            )}
 
             <label className="label">Пароль</label>
             <input

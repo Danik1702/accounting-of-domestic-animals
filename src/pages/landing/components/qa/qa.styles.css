@@ -9,7 +9,7 @@
 
 .qa-title-container {
   padding-left: 30px;
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .qa-title {
@@ -23,7 +23,7 @@
 .own-questyon-button {
   display: inline-block;
   background: #1c1a1a;
-  border: 2px solid #9830bd;
+  border: 1px solid #9830bd;
   box-sizing: border-box;
   border-radius: 22px;
   font-size: 14px;
@@ -31,10 +31,19 @@
   color: #9830bd;
   padding: 5px 15px;
   cursor: pointer;
+  transition-duration: 1s;
+}
+
+.own-questyon-button:hover {
+  background-color: #9830bd;
+  color: #ffffff;
+  border-color: #ffffff;
+  box-shadow: 0 0 5px #ffffff;
+
 }
 
 .qa-container {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .qa {
@@ -71,5 +80,5 @@
 }
 
 .more-button {
-    display: inline-block;
+  display: inline-block;
 }
