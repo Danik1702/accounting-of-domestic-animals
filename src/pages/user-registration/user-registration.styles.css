@@ -23,6 +23,7 @@
 .reg-logo {
   width: 150px;
   height: 150px;
+  cursor: pointer;
 }
 
 .reg-page-image {
@@ -47,9 +48,13 @@
   text-align: center;
   padding: 10px 0;
   cursor: pointer;
+  border: 1px solid #ed7a7a;
+  transition-duration: 1s;
 }
 
 .user-reg-button:hover {
+  border-color: #ffffff;
+  box-shadow: 0 0 10px #ffffff;
   background-color: #a32121;
 }
 
@@ -97,7 +102,7 @@
 
 .submit-container {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 .submit {
@@ -111,4 +116,12 @@
 .reg-error {
   color: #a32121;
   margin-top: 3px;
+}
+
+.ur-header {
+  color: #ffffff;
+  font-size: 33px;
+  line-height: 36px;
+  font-weight: normal;
+  text-align: center;
 }
