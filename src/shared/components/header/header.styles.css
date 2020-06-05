@@ -80,6 +80,11 @@
   color: #000000;
 }
 
+.header-active-page {
+  color: #e64e4e;
+  text-shadow: 0 0 5px #ffffff;
+}
+
 /* Log-in modal window styles */
 
 .sign-in-modal {

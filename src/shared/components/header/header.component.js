@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import { useForm } from "react-hook-form";
-import { useHistory, Link } from "react-router-dom";
+import { useHistory, Link, useLocation } from "react-router-dom";
 
 import { ROUTES } from "../../constants/routes.constants";
 import logo from "../../../images/logo.png";
@@ -15,6 +15,12 @@ export const Header = () => {
   const { register, handleSubmit, errors } = useForm();
 
   const history = useHistory();
+  const location = useLocation();
+
+  const currentPage = location.pathname.slice(1);
+
+  const activeStyles = "header-active-page";
+  const passiveStyles = "header-passive-page";
 
   const handleOpenModal = () => {
     setIsOpen(true);
@@ -100,27 +106,52 @@ export const Header = () => {
         </div>
         <ul className="list-container">
           <li className="list-container__link">
-            <Link to={ROUTES.landing} className="list-container-route">
+            <Link
+              to={ROUTES.landing}
+              className={`list-container-route ${
+                currentPage === "" ? activeStyles : passiveStyles
+              }`}
+            >
               Головна
             </Link>
           </li>
           <li className="list-container__link">
-            <Link to={ROUTES.vanishedPets} className="list-container-route">
+            <Link
+              to={ROUTES.vanishedPets}
+              className={`list-container-route ${
+                currentPage === "vanished-pets" ? activeStyles : passiveStyles
+              }`}
+            >
               Зниклі тварини
             </Link>
           </li>
           <li className="list-container__link">
-            <Link to={ROUTES.shelter} className="list-container-route">
+            <Link
+              to={ROUTES.shelter}
+              className={`list-container-route ${
+                currentPage === "shelter" ? activeStyles : passiveStyles
+              }`}
+            >
               Приют
             </Link>
           </li>
           <li className="list-container__link">
-            <Link to={ROUTES.careCheck} className="list-container-route">
+            <Link
+              to={ROUTES.careCheck}
+              className={`list-container-route ${
+                currentPage === "care-check" ? activeStyles : passiveStyles
+              }`}
+            >
               Перевірка догляду
             </Link>
           </li>
           <li className="list-container__link">
-            <Link to={ROUTES.petFinder} className="list-container-route">
+            <Link
+              to={ROUTES.petFinder}
+              className={`list-container-route ${
+                currentPage === "pet-finder" ? activeStyles : passiveStyles
+              }`}
+            >
               Пошук
             </Link>
           </li>

@@ -30,14 +30,9 @@ export const VanishedPets = () => {
     getVanishedPets();
   }, []);
 
-  const logData = () => {
-    console.log(pets, vanishedPets);
-  }
-
   return (
     <>
       <Header />
-      {logData()}
       <div className="vp-wrapper">
         <div className="vp-header-container">
           <h2 className="vp-header-title">Допоможи знайти</h2>
