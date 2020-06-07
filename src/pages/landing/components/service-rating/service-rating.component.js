@@ -1,11 +1,84 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 
 import rating from "../../../../images/rating.png";
 import user from "../../../../images/user.png";
+import API from "../../../../shared/apis/server-api";
+import { SRModal } from "./modal/modal.component";
+import { ROUTES } from "../../../../shared/constants/routes.constants";
 
 import "./service-rating.styles.css";
 
 export const ServiceRating = () => {
+  const [reviews, setReviews] = useState([]);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const history = useHistory();
+
+  useEffect(() => {
+    const getReviews = async () => {
+      const reviewsFromServer = await API.get("/reviews");
+
+      setReviews(reviewsFromServer.data);
+    };
+
+    getReviews();
+  }, []);
+
+  const handleOpenModal = () => {
+    setIsOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsOpen(false);
+  };
+
+  const onUserClick = () => {
+    history.push(ROUTES.userProfile);
+  };
+
+  const onFormSubmit = (data) => {
+    const serverObject = {
+      ...data,
+      id: reviews.length + 1,
+      userId: 1,
+      userName: "Андрій Макаренко",
+      date: new Date().toLocaleString(),
+    };
+
+    const setData = async () => {
+      await API.post("/reviews", serverObject);
+    };
+
+    setData();
+    handleCloseModal();
+  };
+
+  const renderReviews = () => {
+    if (!reviews.length) {
+      return (
+        <p className="sr-review-loading">Зачекайте, коментарі завантажуються</p>
+      );
+    }
+
+    return reviews.map((review) => {
+      return (
+        <div className="review" key={review.id}>
+          <div className="review-info-container">
+            <img src={user} className="user-icon" alt="user-icon" />
+            <p className="user-name" onClick={onUserClick}>
+              {review.userName}
+            </p>
+            <p className="review-time">{review.date}</p>
+          </div>
+          <div className="review-text-container">
+            <p className="review__text">{review.text}</p>
+          </div>
+        </div>
+      );
+    });
+  };
+
   return (
     <div className="container">
       <div className="rating-container">
@@ -21,51 +94,16 @@ export const ServiceRating = () => {
       <div className="reviews-container">
         <div className="reviews-title-container">
           <h3 className="review__title">Відгуки користувачів</h3>
-          <div className="add-review-button">Написати</div>
+          <div className="add-review-button" onClick={handleOpenModal}>
+            Написати
+          </div>
+          <SRModal
+            isOpen={isOpen}
+            handleCloseModal={handleCloseModal}
+            onFormSubmit={onFormSubmit}
+          />
         </div>
-        <div className="reviews">
-          <div className="review">
-            <div className="review-info-container">
-              <img src={user} className="user-icon" alt="user-icon" />
-              <p className="user-name">Андрій Антоненко</p>
-              <p className="review-time">02.05.2020</p>
-            </div>
-            <div className="review-text-container">
-              <p className="review__text">
-                Надзвичайно крутий сервіс! Задоволений на 100%. Пілся реєстрації
-                зажив новим життям разом зі своїм песиком - Борисом. Раджу всім!
-              </p>
-            </div>
-          </div>
-
-          <div className="review">
-            <div className="review-info-container">
-              <img src={user} className="user-icon" alt="user-icon" />
-              <p className="user-name">Олег Винник</p>
-              <p className="review-time">07.04.2020</p>
-            </div>
-            <div className="review-text-container">
-              <p className="review__text">
-                Надзвичайно крутий сервіс! Задоволений на 100%. Пілся реєстрації
-                зажив новим життям разом зі своїм песиком - Борисом. Раджу всім!
-              </p>
-            </div>
-          </div>
-
-          <div className="review">
-            <div className="review-info-container">
-              <img src={user} className="user-icon" alt="user-icon" />
-              <p className="user-name">Івасик Телесик</p>
-              <p className="review-time">10.04.2020</p>
-            </div>
-            <div className="review-text-container">
-              <p className="review__text">
-                Надзвичайно крутий сервіс! Задоволений на 100%. Пілся реєстрації
-                зажив новим життям разом зі своїм песиком - Борисом. Раджу всім!
-              </p>
-            </div>
-          </div>
-        </div>
+        <div className="reviews">{renderReviews()}</div>
         <div className="more-container">
           <div className="more-button">Більше відгуків</div>
         </div>
