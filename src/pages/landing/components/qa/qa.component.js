@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 
 import API from "../../../../shared/apis/server-api";
+import { QAModal } from "./modal/modal.component";
 
 import "./qa.styles.css";
 
 export const QA = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const [questionsAnswers, setQuestionsAnswers] = useState([]);
 
   useEffect(() => {
@@ -16,6 +18,24 @@ export const QA = () => {
 
     getData();
   }, []);
+
+  const handleOpenModal = () => {
+    setIsOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsOpen(false);
+  };
+
+  const onFormSubmit = (data) => {
+    const setData = async () => {
+      API.post("/usersQuestions", { question: data.question });
+    };
+
+    setData();
+
+    handleCloseModal();
+  };
 
   const renderQuestionsAnswers = () => {
     if (!questionsAnswers.length) {
@@ -43,11 +63,16 @@ export const QA = () => {
       <div className="qa-wrapper">
         <div className="qa-title-container">
           <h3 className="qa-title">Відповіді на розповсюджені запитання</h3>
-          <div className="own-questyon-button">Задати власне питання</div>
+          <div className="own-questyon-button" onClick={handleOpenModal}>
+            Задати власне питання
+          </div>
+          <QAModal
+            isOpen={isOpen}
+            handleCloseModal={handleCloseModal}
+            onFormSubmit={onFormSubmit}
+          />
         </div>
-        <div className="qa-container">
-          {renderQuestionsAnswers()}
-        </div>
+        <div className="qa-container">{renderQuestionsAnswers()}</div>
         <div className="more-button-container">
           <div className="more-button">Більше</div>
         </div>
