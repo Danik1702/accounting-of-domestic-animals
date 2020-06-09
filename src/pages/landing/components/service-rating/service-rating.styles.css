@@ -79,9 +79,15 @@
 }
 
 .user-name {
-  width: 70%;
+  width: 50%;
   font-size: 20px;
   line-height: 23px;
+  cursor: pointer;
+  transition-duration: 1s;
+}
+
+.user-name:hover {
+  text-shadow: 0 0 5px #9830bd;
 }
 
 .review-time {
@@ -117,4 +123,11 @@
   border-color: #ffffff;
   box-shadow: 0 0 5px #ffffff;
   background-color: #e54e4e;
+}
+
+.sr-review-loading {
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 20px 0;
 }

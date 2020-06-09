@@ -1,0 +1,95 @@
+.sr-modal {
+  width: 34%;
+  padding: 15px 2%;
+  margin: 0 auto;
+  margin-top: 50px;
+  outline: none;
+  background-color: #474747;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #9830bd;
+}
+
+.sr-modal-header {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #aaaaaa;
+}
+
+.sr-modal-header-text {
+  color: #ffffff;
+  font-size: 26px;
+  line-height: 30px;
+}
+
+.sr-modal-label {
+  display: block;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.sr-modal-field {
+  margin-top: 5px;
+  width: 96%;
+  max-width: 96%;
+  height: 75px;
+  border-radius: 10px;
+  outline: none;
+  padding: 5px 2%;
+  font-size: 16px;
+  background-color: #cccccc;
+}
+
+.sr-modal-field:focus {
+  background-color: #ffffff;
+  box-shadow: 0 0 5px #9830bd;
+}
+
+.sr-modal-submit {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0 15px;
+}
+
+.sr-modal-submit-button {
+  background-color: #9830bd;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  border-radius: 5px;
+  padding: 5px 15px;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid #9830bd;
+  transition-duration: 1s;
+}
+
+.sr-modal-submit-button:hover {
+  color: #9830bd;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px #9830bd;
+}
+
+.sr-modal-undo {
+  background-color: #bbbbbb;
+  font-size: 16px;
+  line-height: 20px;
+  border-radius: 5px;
+  padding: 5px 15px;
+  cursor: pointer;
+  border: 1px solid #bbbbbb;
+  transition-duration: 1s;
+}
+
+.sr-modal-undo:hover {
+  color: #ffffff;
+  border-color: #ffffff;
+  box-shadow: 0 0 5px #ffffff;
+}
+
+.sr-modal-validation {
+  color: rgb(192, 61, 61);
+  font-size: 16px;
+}
